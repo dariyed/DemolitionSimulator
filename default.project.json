@@ -15,7 +15,7 @@
 
     "StarterPlayer": {
       "$properties": {
-        "CharacterWalkSpeed": 20,
+        "CharacterWalkSpeed": 14,
         "CharacterUseJumpPower": true,
         "CharacterJumpPower": 50
       },
