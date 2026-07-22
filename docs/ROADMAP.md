@@ -57,8 +57,9 @@ map with a sensible avatar, proving the pipeline works before any game logic exi
   and `.github/workflows/ci.yml` (already seeded in this repo) are correct and installable.
 - `src/shared/Version.luau` + `tests/Version.spec.luau` as the trivial Tier-1 spec proving
   `lune run test` and CI go green.
-- Choose and set the avatar type (`StarterPlayer` properties — e.g. R15, walk speed) suited to
-  a third-person demolition game.
+- Choose and set the avatar rig type (R6, set via Studio's Game Settings → Avatar tab — this is
+  a per-experience setting outside the place file, not a Rojo-managed property) and walk speed
+  (`StarterPlayer.CharacterWalkSpeed`) suited to a third-person demolition game.
 - A test map: a baseplate/ground plane and open space to place a building on (Epic 1 Issue #2)
   and later trigger destruction in (Issue #3).
 
