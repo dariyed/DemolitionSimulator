@@ -133,6 +133,18 @@ BuildingSpec.TestBuilding = {
             position = { -8, 5, 0 },
             weldTo = "ColumnFrontLeft",
         },
+        -- A small marker welded to the side of a column, sticking out into open air with
+        -- nothing else touching it (unlike the beams, which rest on two columns each, or the
+        -- columns, which sit flush with the ground). It exists only so Issue #3's crude
+        -- destruction test has one part that's truly held up by nothing but its own weld —
+        -- not a "real" structural element.
+        {
+            id = "TestMarker",
+            shape = "Part",
+            size = { 1, 1, 1 },
+            position = { 8, 8, -6.5 },
+            weldTo = "ColumnFrontRight",
+        },
     },
 } :: Building
 
