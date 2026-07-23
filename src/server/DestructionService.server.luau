@@ -72,4 +72,12 @@ destructionRequested.OnServerEvent:Connect(function(player: Player, request: unk
     if weld then
         weld:Destroy()
     end
+
+    -- Roblox puts still parts to sleep as a performance optimization, and destroying a weld
+    -- doesn't always wake the freed part back up on its own — it can sit there as if still
+    -- held up until something (a nudge, a touch) disturbs it. Toggling Anchored forces the
+    -- physics engine to treat it as a fresh body and start simulating gravity on it properly,
+    -- without adding any artificial velocity/impulse that would look like an explosion.
+    targetPart.Anchored = true
+    targetPart.Anchored = false
 end)
